@@ -4,32 +4,70 @@
   <head>
     <title>Jair de Brito - Rei da cachorrada</title>
 
-    <style>
-      /* Cascating Stylesheet */
-      html,
-      body {
-        height: 100%;
-      }
-
-      body {
-        display: grid;
-        place-items: center;
-
-        background: lightblue;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      a {
-        color: lightgrey;
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Jair de Brito</h1>
-    <a href="https://instagram.com/jairr_jr">@jairr_jr</a>
+    <main>
+      <div class="container">
+      <div class="content">
+        <div class="avatar">
+          <span>
+            <img src="Imagens/logo.svg" alt="Logo" />
+          </span>
+          <img src="Imagens/Ellipse 5.png" alt="Foto pessoal" />
+        </div>
+        <h1 id="userName">Jair de Brito</h1>
+        <a href="https://instagram.com/jairr_jr" target="_blank">
+          <img src="Imagens/git.svg" alt="icone github"/>
+          jairr_jr</a
+        >
+      <p>An instructor focused on helping pople start programming for web 
+      </p>
+      <ul id="socialLinks">
+        <li class="youtube">
+          <a 
+            href="https://youtube.com/Bitstv" target="_blank">
+            <img src="Imagens/yt.svg" alt="icone Youtube"  />
+          </a>
+        </li>
+        <li class="facebook">
+          <a href="https://youtube.com" target="_blank">
+            <img src="Imagens/face.svg" alt="icone Facebook"  />
+          </a>
+        </li>
+        <li class="instagram">
+          <a href="https://instagram.com/jairr_jr" >
+            <img
+              src="Imagens/insta.svg"
+              alt="icone Instagram"
+              
+            />
+          </a>
+        </li>
+        <li class="twiter">
+          <a href="https://youtube.com" target="_blank">
+            <img src="Imagens/tt.svg" alt="icone Twiter" />
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script>
+      const linksSocialMedia={
+        instagram: "jairr_jr",
+        youtube: "Bitstv"
+      }
+      function changeSocialMediaLinks(){
+
+        for(let li of socialLinks.children){
+          const social= li.getAttribute('class')
+
+          li.children.href = `https://${social}.com/${linksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
