@@ -14,14 +14,16 @@
           <span>
             <img src="Imagens/logo.svg" alt="Logo" />
           </span>
-          <img src="Imagens/Ellipse 5.png" alt="Foto pessoal" />
+          <img src="Imagens/Ellipse 5.png" alt="Foto pessoal"
+            id="userImage"
+          />
         </div>
         <h1 id="userName">Jair de Brito</h1>
-        <a href="https://instagram.com/jairr_jr" target="_blank">
+        <a id="userLink" href="https://instagram.com/jairr_jr" target="_blank">
           <img src="Imagens/git.svg" alt="icone github"/>
-          jairr_jr</a
+          <span id="userLogin">jairr_jr</span></a
         >
-      <p>An instructor focused on helping pople start programming for web 
+      <p id="Bio">An instructor focused on helping pople start programming for web 
       </p>
       <ul id="socialLinks">
         <li class="youtube">
@@ -51,23 +53,6 @@
         </li>
       </ul>
     </main>
-    <script>
-      const linksSocialMedia={
-        instagram: "jairr_jr",
-        youtube: "Bitstv"
-      }
-      function changeSocialMediaLinks(){
-
-        for(let li of socialLinks.children){
-          const social= li.getAttribute('class')
-
-          li.children.href = `https://${social}.com/${linksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
