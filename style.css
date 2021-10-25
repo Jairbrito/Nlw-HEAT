@@ -15,9 +15,10 @@ body {
   place-items: center;
 }
 main {
-  background: url(Imagens/mask.png);
-  height: 812px;
-  width: 375px;
+  background: url(Imagens/Mobile.svg) no-repeat center/cover;
+  height: 100vh;
+  width: 100vw;
+  min-height: 812px;
 }
 .container {
   max-width: 250px;
